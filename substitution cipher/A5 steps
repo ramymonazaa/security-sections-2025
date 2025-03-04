@@ -1,0 +1,13 @@
+text==>text_bits
+gen key 64 bit 
+key ==>3 rigisters
+keystream:
+len=len(text_bits)
+to calc each bit:
+   calc majority maj
+   each register its bit(8,10,10) equal maj shifted
+   newbit =r1[18] ^r2[21] ^ r3[22]
+   append(newbit) to keystream
+	
+result=text_bits^keystream
+the encrption and decryptoin is same you just call with plaintext or ciphertext
